@@ -7,10 +7,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 3, 141, 255),
       appBar: AppBar(
+        backgroundColor: Colors.indigoAccent,
         elevation: 0,
         actions: [IconButton(onPressed: () {}, icon: Icon(Icons.search))],
-        title: Center(child: Text('Peliculas en cine')),
+        title: Center(child: Text('Peliculones')),
       ),
       body: Column(
         children: [CardSwiper(), MovieSlider()],

@@ -8,6 +8,7 @@ class DetailsScreen extends StatelessWidget {
     final String movie =
         ModalRoute.of(context)?.settings.arguments.toString() ?? 'Sin Nombre';
     return const Scaffold(
+      backgroundColor: Color.fromARGB(255, 3, 141, 255),
       body: CustomScrollView(
         slivers: [
           _CustomAppBar(),
@@ -98,7 +99,7 @@ class _PosterAndTitle extends StatelessWidget {
                     Icon(
                       Icons.star_outline,
                       size: 20,
-                      color: Colors.blueAccent,
+                      color: Color.fromARGB(255, 255, 251, 0),
                     ),
                     SizedBox(
                       width: 5,
