@@ -9,7 +9,7 @@ class MovieSlider extends StatelessWidget {
     return Container(
       width: double.infinity,
       height: size.height * 0.30,
-      color: Color.fromARGB(64, 78, 9, 168),
+      color: Colors.red,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

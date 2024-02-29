@@ -8,7 +8,6 @@ class DetailsScreen extends StatelessWidget {
     final String movie =
         ModalRoute.of(context)?.settings.arguments.toString() ?? 'Sin Nombre';
     return const Scaffold(
-      backgroundColor: Color.fromARGB(255, 3, 141, 255),
       body: CustomScrollView(
         slivers: [
           _CustomAppBar(),
@@ -36,7 +35,7 @@ class _CustomAppBar extends StatelessWidget {
       pinned: true,
       flexibleSpace: FlexibleSpaceBar(
         centerTitle: true,
-        titlePadding: const EdgeInsets.all(0),
+        titlePadding: EdgeInsets.all(0),
         title: Container(
           width: double.infinity,
           alignment: Alignment.bottomCenter,
@@ -46,7 +45,7 @@ class _CustomAppBar extends StatelessWidget {
             style: TextStyle(fontSize: 18),
           ),
         ),
-        background: const FadeInImage(
+        background: FadeInImage(
           placeholder: AssetImage('assets/loading.gif'),
           image: AssetImage('assets/no-image.jpg'),
         ),
@@ -67,14 +66,14 @@ class _PosterAndTitle extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
-            child: const FadeInImage(
+            child: FadeInImage(
               placeholder: AssetImage('assets/loading.gif'),
               image: AssetImage('assets/no-image.jpg'),
               height: 250,
             ),
           ),
-          const SizedBox(width: 20),
-          const Expanded(
+          SizedBox(width: 20),
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -99,7 +98,7 @@ class _PosterAndTitle extends StatelessWidget {
                     Icon(
                       Icons.star_outline,
                       size: 20,
-                      color: Color.fromARGB(255, 255, 251, 0),
+                      color: Colors.blueAccent,
                     ),
                     SizedBox(
                       width: 5,

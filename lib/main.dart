@@ -3,7 +3,6 @@ import 'package:peliculas/providers/movies_provider.dart';
 import 'package:peliculas/screens/screens.dart';
 import 'package:provider/provider.dart';
 
-//
 void main() {
   runApp(const AppState());
 }
@@ -42,7 +41,6 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      debugShowCheckedModeBanner: false,
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
