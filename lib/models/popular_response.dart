@@ -1,7 +1,5 @@
-import 'package:meta/meta.dart';
+import 'package:peliculas/models/models.dart';
 import 'dart:convert';
-
-import 'package:peliculas/models/movies.dart';
 
 class PopularResponse {
   int page;

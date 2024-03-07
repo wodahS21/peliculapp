@@ -2,8 +2,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:peliculas/models/models.dart';
-import 'package:peliculas/models/movies.dart';
-import 'package:peliculas/models/now_playing_response.dart';
 
 class MoviesProvider extends ChangeNotifier {
   String _baseUrl = 'api.themoviedb.org';
@@ -11,8 +9,8 @@ class MoviesProvider extends ChangeNotifier {
   String _language = 'es-MX';
 
   List<Movie> onDisplayMovies = [];
-
   List<Movie> popularMovies = [];
+
   MoviesProvider() {
     getOnDisplayMovies();
     getPopularMovies();
@@ -32,7 +30,7 @@ class MoviesProvider extends ChangeNotifier {
 
     notifyListeners();
 
-    print(nowPlayingResponse.results[0].title);
+    print(nowPlayingResponse.results[0].id);
   }
 
   getPopularMovies() async {
@@ -44,7 +42,9 @@ class MoviesProvider extends ChangeNotifier {
     //print(decodeData);
     //print(response.body);
     final popularResponse = PopularResponse.fromRawJson(response.body);
+
     popularMovies = [...popularMovies, ...popularResponse.results];
+
     notifyListeners();
   }
 }

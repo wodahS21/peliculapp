@@ -1,6 +1,6 @@
 import 'package:meta/meta.dart';
 import 'dart:convert';
-import 'package:peliculas/models/movies.dart';
+import 'package:peliculas/models/models.dart';
 
 class NowPlayingResponse {
   Dates dates;
